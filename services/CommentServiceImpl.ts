@@ -1,25 +1,25 @@
-import CommentDaoImpl from "../dao/CommentDaoImpl";
+import CommentDao from "../dao/CommentDao";
 import CommentService from "./CommentService";
 import Comment from "../model/Comment";
 
 export default class CommentServiceImpl implements CommentService {
-  private commentDaoImpl: CommentDaoImpl;
+  private commentDao: CommentDao;
 
-  constructor(commentDaoImpl: CommentDaoImpl) {
-    this.commentDaoImpl = commentDaoImpl;
+  constructor(commentDao: CommentDao) {
+    this.commentDao = commentDao;
   }
 
   addComment() {
     const comment = new Comment("this is comment", null);
-    this.commentDaoImpl.insert(/*comment*/);
+    this.commentDao.insert(/*comment*/);
   }
   editComment() {
-    this.commentDaoImpl.update();
+    this.commentDao.update();
   }
   removeComment() {
-    this.commentDaoImpl.remove();
+    this.commentDao.remove();
   }
   listComments() {
-    this.commentDaoImpl.findAll();
+    this.commentDao.findAll();
   }
 }
