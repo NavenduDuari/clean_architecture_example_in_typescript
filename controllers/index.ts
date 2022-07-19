@@ -3,6 +3,4 @@ import { commentServiceImpl } from "../services";
 
 const commentController = new CommentController(commentServiceImpl);
 
-export default {
-  commentController,
-};
+export { commentController };

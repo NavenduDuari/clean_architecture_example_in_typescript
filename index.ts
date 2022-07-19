@@ -1,5 +1,8 @@
 // app/app.ts
 // import the controllers and bootstrap the app
-import { deleteComment, getComments, notFound, postComment, patchComment } from "./controllers";
+import { commentController } from "./controllers";
 
-postComment();
+// commentController.addComment();
+// commentController.editComment();
+// commentController.removeComment();
+commentController.listComments();
